@@ -14,6 +14,7 @@ const StarWarsSketch = (props) => {
       textFont = p5.loadFont("./Starjedi.ttf");
       titleFont = p5.loadFont("./Starjhol.ttf");
     };
+    
     p5.setup = () => {
       p5.createCanvas(p5.windowWidth, p5.windowHeight, p5.WEBGL);
       p5.background(0);
