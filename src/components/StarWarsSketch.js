@@ -1,5 +1,5 @@
-import React, { useEffect } from "react";
-import * as p5 from "p5";
+import React, { useEffect } from 'react';
+import p5 from 'p5';
 
 const StarWarsSketch = (props) => {
   const Sketch = (p5) => {
@@ -11,10 +11,10 @@ const StarWarsSketch = (props) => {
     let textAlpha;
 
     p5.preload = () => {
-      textFont = p5.loadFont("./Starjedi.ttf");
-      titleFont = p5.loadFont("./Starjhol.ttf");
+      textFont = p5.loadFont('./Starjedi.ttf');
+      titleFont = p5.loadFont('./Starjhol.ttf');
     };
-    
+
     p5.setup = () => {
       p5.createCanvas(p5.windowWidth, p5.windowHeight, p5.WEBGL);
       p5.background(0);
@@ -39,7 +39,13 @@ const StarWarsSketch = (props) => {
         p5.textFont(textFont);
         p5.rotateX(p5.PI / 4);
         p5.textLeading(p5.width / 30);
-        p5.text(props.enteredSummary, textX, textY, p5.width * 0.7, p5.height * 10);
+        p5.text(
+          props.enteredSummary,
+          textX,
+          textY,
+          p5.width * 0.7,
+          p5.height * 10
+        );
         textY -= 1.5;
         if (textY < -p5.width / 1.7) {
           textAlpha -= 0.5;
